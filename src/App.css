@@ -1,0 +1,63 @@
+#root {
+  width: 100vw;
+  height: 100vh; 
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432);
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: white;
+  border-color: #ccc;
+  color: black;
+  border-radius: 5px 5px 0 0;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure it takes up full height */
+}
+
+.tab-panel {
+  flex-grow: 1; /* Allow it to grow */
+  display: flex; /* Optional, for child alignment */
+  justify-content: center; /* Optional */
+  align-items: center; /* Optional */
+}
+
+
+
