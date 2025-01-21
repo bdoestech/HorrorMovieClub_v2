@@ -5,6 +5,7 @@ import {
   Route,
   Link,
   BrowserRouter,
+  Navigate,
 } from "react-router-dom"; // Import Router components
 
 import "./App.css";
@@ -50,6 +51,7 @@ function App() {
         </nav>
         <main>
           <Routes>
+            <Route path="/" element={<Navigate to="/home" />} /> {/* Default */}
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/discussion" element={<Discussion />} />
