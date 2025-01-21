@@ -1,63 +1,93 @@
+:root {
+  /* Colors */
+  --accent-dark-color: black;
+  --background-color: indigo;
+  --text-color: white;
+
+  /* Text/Font Sizes */
+  --menu-text-size: 2rem;
+}
+
 #root {
   width: 100vw;
   height: 100vh; 
-  background: #c31432;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #240b36, #c31432);
-  background: linear-gradient(to right, #240b36, #c31432);
+  background: var(--background-color);  /* fallback for old browsers */
 }
 
-.react-tabs__tab-list {
-  border-bottom: 1px solid #ccc;
+body {
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
   display: flex;
-  justify-content: center;
-  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: "transparent";
+  color: var(--text-color);
 }
 
-.react-tabs__tab {
-  display: inline-block;
-  border: 1px solid transparent;
-  border-bottom: none;
-  bottom: -1px;
-  position: relative;
-  padding: 6px 12px;
+.hamburger {
+  font-size: var(--menu-text-size);
+  background: none;
+  border: none;
+  color: var(--text-color);
   cursor: pointer;
+  position: relative;
+  z-index: 3;
 }
 
-.react-tabs__tab--selected {
-  background: white;
-  border-color: #ccc;
-  color: black;
-  border-radius: 5px 5px 0 0;
-}
-
-.react-tabs__tab--disabled {
-  color: GrayText;
-  cursor: default;
-}
-
-.react-tabs__tab-panel {
-  display: none;
-}
-
-.react-tabs__tab-panel--selected {
-  display: block;
-}
-
-
-.tabs-container {
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400px; /* Adjust width as needed */
+  background-color: var(--accent-dark-color);
+  color: var(--text-color);
+  padding: 1rem;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensure it takes up full height */
+  justify-content: flex-start;
+  align-items: start;
+  padding-top: 4rem;
+  transform: translateX(-100%); /* Hidden by default */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.tab-panel {
-  flex-grow: 1; /* Allow it to grow */
-  display: flex; /* Optional, for child alignment */
-  justify-content: center; /* Optional */
-  align-items: center; /* Optional */
+.menu.open {
+  transform: translateX(0); /* Visible when open */
 }
 
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
 
+.menu li {
+  margin: 0.5rem 0;
 
+}
+
+.menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--menu-text-size);
+}
+
+main {
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
+}
