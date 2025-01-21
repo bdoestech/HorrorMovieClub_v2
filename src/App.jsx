@@ -35,16 +35,16 @@ function App() {
         <nav className={`menu ${menuOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <a href={base + "home"}>Home</a>
+              <Link to="/home">Home</Link>
             </li>
             <li>
-              <a href={base + "about"}>About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href={base + "discussion"}>Discussion</a>
+              <Link to="/discussion">Discussion</Link>
             </li>
             <li>
-              <a href={base + "links"}>Links</a>
+              <Link to="/links">Links</Link>
             </li>
           </ul>
         </nav>
