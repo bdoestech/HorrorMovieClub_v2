@@ -24,6 +24,10 @@ function App() {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <BrowserRouter basename="/HorrorMovieClub_v2">
       <div className="App">
@@ -36,16 +40,24 @@ function App() {
         <nav className={`menu ${menuOpen ? "open" : ""}`}>
           <ul>
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/home" onClick={closeMenu}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={closeMenu}>
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/discussion">Discussion</Link>
+              <Link to="/discussion" onClick={closeMenu}>
+                Discussion
+              </Link>
             </li>
             <li>
-              <Link to="/links">Links</Link>
+              <Link to="/links" onClick={closeMenu}>
+                Links
+              </Link>
             </li>
           </ul>
         </nav>
